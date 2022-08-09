@@ -36,5 +36,19 @@ describe("Given I am connected as an employee", () => {
       const datesSorted = [...dates].sort(antiChrono)
       expect(dates).toEqual(datesSorted)
     })
+		describe('Given content is a loading', () => {
+			test('Then a loading page should appear', () => {
+				const html = BillsUI({ loading: true })
+				document.body.innerHTML = html
+				expect(screen.getAllByText('Loading...')).toBeTruthy()
+			})
+		})
+		describe('Given an error appends', () => {
+			test('Then an error message should appear', () => {
+				const html = BillsUI({ error: true })
+				document.body.innerHTML = html
+				expect(screen.getAllByText('Erreur')).toBeTruthy()
+			})
+		})
   })
 })
