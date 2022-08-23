@@ -82,10 +82,6 @@ describe("Given I am connected as an employee", () => {
           bills,
           localStorage: window.localStorage
         })
-        newBill.getBills().then(data => {
-          console.log("###########")
-          console.log('data :', data)
-        })
         $.fn.modal = jest.fn()
         const eyes = screen.getAllByTestId('icon-eye')
         eyes.forEach(eye => {
