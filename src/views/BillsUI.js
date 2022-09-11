@@ -5,7 +5,6 @@ import LoadingPage from "./LoadingPage.js"
 import Actions from './Actions.js'
 
 const row = (bill) => {
-  console.log('bill', bill)
   return `
     <tr>
       <td>${bill.type}</td>
@@ -28,7 +27,6 @@ const rows = (data) => {
 }
 
 export default ({ data: bills, loading, error }) => {
-  console.log('bills', bills)
   const modal = () => `
     <div class="modal fade" id="modaleFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
